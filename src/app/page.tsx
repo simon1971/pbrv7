@@ -46,8 +46,8 @@ export default function Dashboard() {
             <div className="flex items-center gap-3">
               <span className="text-2xl">{stat.icon}</span>
               <div>
-                <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                <p className="text-sm text-gray-500">{stat.label}</p>
+                <p className="text-2xl font-bold text-white/90">{stat.value}</p>
+                <p className="text-sm text-white/45">{stat.label}</p>
               </div>
             </div>
           </Card>
@@ -61,31 +61,32 @@ export default function Dashboard() {
             href: "/matters",
             label: "View Matters",
             icon: "📋",
-            color: "bg-indigo-50 hover:bg-indigo-100 text-indigo-700",
+            color: "bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-400/20",
           },
           {
             href: "/intake",
             label: "New Intake",
             icon: "📥",
-            color: "bg-emerald-50 hover:bg-emerald-100 text-emerald-700",
+            color: "bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-400/20",
           },
           {
             href: "/evidence",
             label: "Evidence Workspace",
             icon: "🔍",
-            color: "bg-amber-50 hover:bg-amber-100 text-amber-700",
+            color: "bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 border border-blue-400/20",
           },
           {
             href: "/drafts",
             label: "Draft Workspace",
             icon: "📝",
-            color: "bg-purple-50 hover:bg-purple-100 text-purple-700",
+            color: "bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-400/20",
           },
         ].map((action) => (
           <Link
             key={action.href}
             href={action.href}
-            className={`flex items-center gap-3 p-4 rounded-lg font-medium transition-colors ${action.color}`}
+            className={`flex items-center gap-3 p-4 rounded-2xl font-medium transition-all duration-200 hover:-translate-y-0.5 ${action.color}`}
+            style={{backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)'}}
           >
             <span className="text-xl">{action.icon}</span>
             {action.label}
@@ -95,10 +96,10 @@ export default function Dashboard() {
 
       {/* Recent Matters */}
       <Card>
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">
+        <h2 className="text-lg font-semibold text-white/85 mb-4">
           Recent Matters
         </h2>
-        <div className="divide-y divide-gray-100">
+        <div className="divide-y divide-white/8">
           {recentMatters.map((matter) => (
             <div
               key={matter.id}
@@ -107,11 +108,11 @@ export default function Dashboard() {
               <div>
                 <Link
                   href={`/matters`}
-                  className="font-medium text-gray-900 hover:text-indigo-600"
+                  className="font-medium text-white/80 hover:text-sky-300 transition-colors"
                 >
                   {matter.name}
                 </Link>
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-white/40">
                   Updated {matter.updated}
                 </p>
               </div>

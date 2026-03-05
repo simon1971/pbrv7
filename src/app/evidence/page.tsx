@@ -66,7 +66,7 @@ export default function EvidencePage() {
         title="Evidence Workspace"
         description="Organize and review evidence across all matters."
         actions={
-          <button className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors">
+          <button className="px-4 py-2 bg-sky-500/80 text-white text-sm font-medium rounded-xl hover:bg-sky-400/80 transition-all backdrop-blur-sm shadow-lg shadow-sky-500/20">
             + Upload Evidence
           </button>
         }
@@ -78,21 +78,21 @@ export default function EvidencePage() {
           <input
             type="text"
             placeholder="Search evidence..."
-            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+            className="flex-1 px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/80 placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
           />
           <div className="flex gap-2">
-            <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <option value="">All Types</option>
-              <option value="document">Document</option>
-              <option value="statement">Statement</option>
-              <option value="communication">Communication</option>
-              <option value="image">Image</option>
+            <select className="px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50">
+              <option value="" className="bg-slate-800">All Types</option>
+              <option value="document" className="bg-slate-800">Document</option>
+              <option value="statement" className="bg-slate-800">Statement</option>
+              <option value="communication" className="bg-slate-800">Communication</option>
+              <option value="image" className="bg-slate-800">Image</option>
             </select>
-            <select className="px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
-              <option value="">All Matters</option>
-              <option value="smith">Smith v. Johnson</option>
-              <option value="williams">Estate of Williams</option>
-              <option value="garcia">Garcia Employment Dispute</option>
+            <select className="px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50">
+              <option value="" className="bg-slate-800">All Matters</option>
+              <option value="smith" className="bg-slate-800">Smith v. Johnson</option>
+              <option value="williams" className="bg-slate-800">Estate of Williams</option>
+              <option value="garcia" className="bg-slate-800">Garcia Employment Dispute</option>
             </select>
           </div>
         </div>
@@ -103,51 +103,51 @@ export default function EvidencePage() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-3 px-2 font-medium text-gray-500">
+              <tr className="border-b border-white/10">
+                <th className="text-left py-3 px-2 font-medium text-white/40">
                   Name
                 </th>
-                <th className="text-left py-3 px-2 font-medium text-gray-500 hidden sm:table-cell">
+                <th className="text-left py-3 px-2 font-medium text-white/40 hidden sm:table-cell">
                   Type
                 </th>
-                <th className="text-left py-3 px-2 font-medium text-gray-500 hidden md:table-cell">
+                <th className="text-left py-3 px-2 font-medium text-white/40 hidden md:table-cell">
                   Matter
                 </th>
-                <th className="text-left py-3 px-2 font-medium text-gray-500 hidden lg:table-cell">
+                <th className="text-left py-3 px-2 font-medium text-white/40 hidden lg:table-cell">
                   Date Added
                 </th>
-                <th className="text-left py-3 px-2 font-medium text-gray-500">
+                <th className="text-left py-3 px-2 font-medium text-white/40">
                   Status
                 </th>
-                <th className="text-right py-3 px-2 font-medium text-gray-500 hidden sm:table-cell">
+                <th className="text-right py-3 px-2 font-medium text-white/40 hidden sm:table-cell">
                   Size
                 </th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-gray-100">
+            <tbody className="divide-y divide-white/8">
               {evidenceItems.map((item) => (
                 <tr
                   key={item.id}
-                  className="hover:bg-gray-50 transition-colors"
+                  className="hover:bg-white/5 transition-colors"
                 >
                   <td className="py-3 px-2">
-                    <span className="font-medium text-gray-900">
+                    <span className="font-medium text-white/80">
                       {item.name}
                     </span>
                   </td>
-                  <td className="py-3 px-2 text-gray-500 hidden sm:table-cell">
+                  <td className="py-3 px-2 text-white/45 hidden sm:table-cell">
                     {item.type}
                   </td>
-                  <td className="py-3 px-2 text-gray-500 hidden md:table-cell">
+                  <td className="py-3 px-2 text-white/45 hidden md:table-cell">
                     {item.matter}
                   </td>
-                  <td className="py-3 px-2 text-gray-500 hidden lg:table-cell">
+                  <td className="py-3 px-2 text-white/45 hidden lg:table-cell">
                     {item.dateAdded}
                   </td>
                   <td className="py-3 px-2">
                     <StatusBadge status={item.status} />
                   </td>
-                  <td className="py-3 px-2 text-right text-gray-500 hidden sm:table-cell">
+                  <td className="py-3 px-2 text-right text-white/45 hidden sm:table-cell">
                     {item.size}
                   </td>
                 </tr>

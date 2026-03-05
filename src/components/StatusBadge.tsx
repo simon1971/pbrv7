@@ -1,11 +1,11 @@
 type Status = "active" | "pending" | "completed" | "draft" | "review";
 
 const statusStyles: Record<Status, string> = {
-  active: "bg-green-50 text-green-700 ring-green-600/20",
-  pending: "bg-yellow-50 text-yellow-700 ring-yellow-600/20",
-  completed: "bg-blue-50 text-blue-700 ring-blue-600/20",
-  draft: "bg-gray-50 text-gray-700 ring-gray-600/20",
-  review: "bg-purple-50 text-purple-700 ring-purple-600/20",
+  active: "bg-emerald-400/15 text-emerald-300 ring-emerald-400/30",
+  pending: "bg-amber-400/15 text-amber-300 ring-amber-400/30",
+  completed: "bg-sky-400/15 text-sky-300 ring-sky-400/30",
+  draft: "bg-slate-400/15 text-slate-300 ring-slate-400/30",
+  review: "bg-sky-400/15 text-sky-300 ring-sky-400/30",
 };
 
 interface StatusBadgeProps {

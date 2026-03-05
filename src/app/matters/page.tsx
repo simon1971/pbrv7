@@ -57,7 +57,7 @@ export default function MattersPage() {
         title="Matter Overview"
         description="View and manage all active and past matters."
         actions={
-          <button className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors">
+          <button className="px-4 py-2 bg-sky-500/80 text-white text-sm font-medium rounded-xl hover:bg-sky-400/80 transition-all backdrop-blur-sm shadow-lg shadow-sky-500/20">
             + New Matter
           </button>
         }
@@ -69,30 +69,30 @@ export default function MattersPage() {
             <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-1">
-                  <h3 className="text-lg font-semibold text-gray-900 truncate">
+                  <h3 className="text-lg font-semibold text-white/85 truncate">
                     {matter.name}
                   </h3>
                   <StatusBadge status={matter.status} />
                 </div>
-                <p className="text-sm text-gray-500 mb-2">
+                <p className="text-sm text-white/45 mb-2">
                   {matter.description}
                 </p>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500">
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-white/40">
                   <span>
-                    <strong className="text-gray-700">Client:</strong>{" "}
+                    <strong className="text-white/60">Client:</strong>{" "}
                     {matter.client}
                   </span>
                   <span>
-                    <strong className="text-gray-700">Type:</strong>{" "}
+                    <strong className="text-white/60">Type:</strong>{" "}
                     {matter.type}
                   </span>
                   <span>
-                    <strong className="text-gray-700">Opened:</strong>{" "}
+                    <strong className="text-white/60">Opened:</strong>{" "}
                     {matter.dateOpened}
                   </span>
                 </div>
               </div>
-              <button className="self-start px-3 py-1.5 text-sm text-indigo-600 border border-indigo-200 rounded-md hover:bg-indigo-50 transition-colors whitespace-nowrap">
+              <button className="self-start px-3 py-1.5 text-sm text-sky-300 border border-sky-400/30 rounded-xl hover:bg-sky-500/15 transition-all whitespace-nowrap">
                 View Details
               </button>
             </div>

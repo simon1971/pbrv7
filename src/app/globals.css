@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fafb;
-  --foreground: #111827;
+  --background: #0f0c29;
+  --foreground: #e8e8f0;
+  --glass-bg: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --accent: #818cf8;
+  --accent-light: #c7d2fe;
 }
 
 @theme inline {
@@ -11,7 +16,8 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(135deg, #040f1e 0%, #071828 35%, #081f35 60%, #050d1a 100%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family:
     system-ui,
@@ -21,4 +27,51 @@ body {
     "Helvetica Neue",
     Arial,
     sans-serif;
+  min-height: 100vh;
+}
+
+/* Ambient orbs */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -20%;
+  right: -10%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.13) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glass utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-hover {
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.11);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
 }

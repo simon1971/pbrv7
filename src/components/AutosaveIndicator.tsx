@@ -30,8 +30,8 @@ export default function AutosaveIndicator({
 
   if (saving) {
     return (
-      <div className="flex items-center gap-1.5 text-xs text-gray-400">
-        <span className="inline-block h-2 w-2 rounded-full bg-yellow-400 animate-pulse" />
+      <div className="flex items-center gap-1.5 text-xs text-white/40">
+        <span className="inline-block h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
         Saving...
       </div>
     );
@@ -39,7 +39,7 @@ export default function AutosaveIndicator({
 
   if (showSaved) {
     return (
-      <div className="flex items-center gap-1.5 text-xs text-gray-400">
+      <div className="flex items-center gap-1.5 text-xs text-white/40">
         <span className="inline-block h-2 w-2 rounded-full bg-green-400" />
         Saved
       </div>

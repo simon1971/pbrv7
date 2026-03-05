@@ -49,7 +49,7 @@ export default function DraftsPage() {
         title="Draft Workspace"
         description="Create and edit legal documents."
         actions={
-          <button className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors">
+          <button className="px-4 py-2 bg-sky-500/80 text-white text-sm font-medium rounded-xl hover:bg-sky-400/80 transition-all backdrop-blur-sm shadow-lg shadow-sky-500/20">
             + New Draft
           </button>
         }
@@ -59,7 +59,7 @@ export default function DraftsPage() {
         {/* Document List */}
         <div className="lg:col-span-1">
           <Card>
-            <h2 className="text-sm font-semibold text-gray-900 mb-3">
+            <h2 className="text-sm font-semibold text-white/70 mb-3">
               Documents
             </h2>
             <div className="space-y-2">
@@ -67,20 +67,20 @@ export default function DraftsPage() {
                 <button
                   key={doc.id}
                   onClick={() => setSelectedDraft(doc.id)}
-                  className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                  className={`w-full text-left p-3 rounded-xl border transition-all ${
                     selectedDraft === doc.id
-                      ? "border-indigo-300 bg-indigo-50"
-                      : "border-gray-200 hover:bg-gray-50"
+                    ? "border-sky-400/40 bg-sky-500/20"
+                      : "border-white/10 hover:bg-white/8"
                   }`}
                 >
                   <div className="flex items-center justify-between mb-1">
-                    <span className="font-medium text-gray-900 text-sm truncate">
+                    <span className="font-medium text-white/80 text-sm truncate">
                       {doc.title}
                     </span>
                     <StatusBadge status={doc.status} />
                   </div>
-                  <p className="text-xs text-gray-500">{doc.matter}</p>
-                  <p className="text-xs text-gray-400 mt-1">
+                  <p className="text-xs text-white/45">{doc.matter}</p>
+                  <p className="text-xs text-white/30 mt-1">
                     Edited {doc.lastEdited}
                   </p>
                 </button>
@@ -93,7 +93,7 @@ export default function DraftsPage() {
         <div className="lg:col-span-2">
           <Card>
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-sm font-semibold text-gray-900">
+              <h2 className="text-sm font-semibold text-white/70">
                 {selectedDraft
                   ? draftDocuments.find((d) => d.id === selectedDraft)?.title
                   : "Select a document"}
@@ -103,14 +103,14 @@ export default function DraftsPage() {
             <textarea
               value={editorContent}
               onChange={handleEditorChange}
-              className="w-full h-96 px-4 py-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-y font-mono leading-relaxed"
+              className="w-full h-96 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-white/75 placeholder-white/25 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50 resize-y font-mono leading-relaxed"
               placeholder="Select a document to begin editing..."
             />
             <div className="flex justify-end gap-3 mt-4">
-              <button className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+              <button className="px-4 py-2 text-sm font-medium text-white/60 border border-white/15 rounded-xl hover:bg-white/8 transition-all">
                 Export PDF
               </button>
-              <button className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors">
+              <button className="px-4 py-2 text-sm font-medium text-white bg-sky-500/80 rounded-xl hover:bg-sky-400/80 transition-all shadow-lg shadow-sky-500/20">
                 Submit for Review
               </button>
             </div>

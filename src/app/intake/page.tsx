@@ -48,7 +48,7 @@ export default function IntakePage() {
             <div>
               <label
                 htmlFor="clientName"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-white/60 mb-1"
               >
                 Client Name
               </label>
@@ -58,7 +58,7 @@ export default function IntakePage() {
                 name="clientName"
                 value={formData.clientName}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/80 placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
                 placeholder="Enter client name"
               />
             </div>
@@ -66,7 +66,7 @@ export default function IntakePage() {
             <div>
               <label
                 htmlFor="contactEmail"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-white/60 mb-1"
               >
                 Email
               </label>
@@ -76,7 +76,7 @@ export default function IntakePage() {
                 name="contactEmail"
                 value={formData.contactEmail}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/80 placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
                 placeholder="client@example.com"
               />
             </div>
@@ -84,7 +84,7 @@ export default function IntakePage() {
             <div>
               <label
                 htmlFor="contactPhone"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-white/60 mb-1"
               >
                 Phone
               </label>
@@ -94,7 +94,7 @@ export default function IntakePage() {
                 name="contactPhone"
                 value={formData.contactPhone}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/80 placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
                 placeholder="(555) 123-4567"
               />
             </div>
@@ -102,7 +102,7 @@ export default function IntakePage() {
             <div>
               <label
                 htmlFor="matterType"
-                className="block text-sm font-medium text-gray-700 mb-1"
+                className="block text-sm font-medium text-white/60 mb-1"
               >
                 Matter Type
               </label>
@@ -111,17 +111,17 @@ export default function IntakePage() {
                 name="matterType"
                 value={formData.matterType}
                 onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
               >
-                <option value="">Select type...</option>
-                <option value="civil">Civil Litigation</option>
-                <option value="criminal">Criminal Defense</option>
-                <option value="family">Family Law</option>
-                <option value="corporate">Corporate Law</option>
-                <option value="ip">Intellectual Property</option>
-                <option value="employment">Employment Law</option>
-                <option value="probate">Probate / Estate</option>
-                <option value="other">Other</option>
+                <option value="" className="bg-slate-800">Select type...</option>
+                <option value="civil" className="bg-slate-800">Civil Litigation</option>
+                <option value="criminal" className="bg-slate-800">Criminal Defense</option>
+                <option value="family" className="bg-slate-800">Family Law</option>
+                <option value="corporate" className="bg-slate-800">Corporate Law</option>
+                <option value="ip" className="bg-slate-800">Intellectual Property</option>
+                <option value="employment" className="bg-slate-800">Employment Law</option>
+                <option value="probate" className="bg-slate-800">Probate / Estate</option>
+                <option value="other" className="bg-slate-800">Other</option>
               </select>
             </div>
           </div>
@@ -129,7 +129,7 @@ export default function IntakePage() {
           <div>
             <label
               htmlFor="urgency"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-white/60 mb-1"
             >
               Urgency
             </label>
@@ -142,9 +142,9 @@ export default function IntakePage() {
                     value={level}
                     checked={formData.urgency === level}
                     onChange={handleChange}
-                    className="text-indigo-600 focus:ring-indigo-500"
+                    className="text-sky-400 focus:ring-sky-400"
                   />
-                  <span className="text-sm text-gray-700 capitalize">
+                  <span className="text-sm text-white/60 capitalize">
                     {level}
                   </span>
                 </label>
@@ -155,7 +155,7 @@ export default function IntakePage() {
           <div>
             <label
               htmlFor="description"
-              className="block text-sm font-medium text-gray-700 mb-1"
+              className="block text-sm font-medium text-white/60 mb-1"
             >
               Description
             </label>
@@ -165,7 +165,7 @@ export default function IntakePage() {
               rows={5}
               value={formData.description}
               onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 resize-y"
+              className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/80 placeholder-white/30 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50 resize-y"
               placeholder="Describe the matter details..."
             />
           </div>
@@ -173,13 +173,13 @@ export default function IntakePage() {
           <div className="flex justify-end gap-3">
             <button
               type="button"
-              className="px-4 py-2 text-sm font-medium text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-white/60 border border-white/15 rounded-xl hover:bg-white/8 transition-all"
             >
               Save Draft
             </button>
             <button
               type="submit"
-              className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors"
+              className="px-4 py-2 text-sm font-medium text-white bg-sky-500/80 rounded-xl hover:bg-sky-400/80 transition-all shadow-lg shadow-sky-500/20"
             >
               Submit Intake
             </button>

@@ -12,11 +12,11 @@ export default function PageHeader({
   return (
     <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+        <h1 className="text-2xl font-bold text-white/95 sm:text-3xl tracking-tight">
           {title}
         </h1>
         {description && (
-          <p className="mt-1 text-sm text-gray-500">{description}</p>
+          <p className="mt-1 text-sm text-white/50">{description}</p>
         )}
       </div>
       {actions && <div className="flex gap-2">{actions}</div>}

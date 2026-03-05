@@ -16,7 +16,13 @@
 }
 
 body {
-  background: linear-gradient(135deg, #040f1e 0%, #071828 35%, #081f35 60%, #050d1a 100%);
+  background: linear-gradient(
+    135deg,
+    #040f1e 0%,
+    #071828 35%,
+    #081f35 60%,
+    #050d1a 100%
+  );
   background-attachment: fixed;
   color: var(--foreground);
   font-family:
@@ -38,7 +44,11 @@ body::before {
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.18) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(14, 165, 233, 0.18) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -51,7 +61,11 @@ body::after {
   right: -10%;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.13) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.13) 0%,
+    transparent 70%
+  );
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -67,7 +81,10 @@ body::after {
 }
 
 .glass-hover {
-  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .glass-hover:hover {

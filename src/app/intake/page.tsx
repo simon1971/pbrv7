@@ -113,15 +113,33 @@ export default function IntakePage() {
                 onChange={handleChange}
                 className="w-full px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50 focus:border-sky-400/50"
               >
-                <option value="" className="bg-slate-800">Select type...</option>
-                <option value="civil" className="bg-slate-800">Civil Litigation</option>
-                <option value="criminal" className="bg-slate-800">Criminal Defense</option>
-                <option value="family" className="bg-slate-800">Family Law</option>
-                <option value="corporate" className="bg-slate-800">Corporate Law</option>
-                <option value="ip" className="bg-slate-800">Intellectual Property</option>
-                <option value="employment" className="bg-slate-800">Employment Law</option>
-                <option value="probate" className="bg-slate-800">Probate / Estate</option>
-                <option value="other" className="bg-slate-800">Other</option>
+                <option value="" className="bg-slate-800">
+                  Select type...
+                </option>
+                <option value="civil" className="bg-slate-800">
+                  Civil Litigation
+                </option>
+                <option value="criminal" className="bg-slate-800">
+                  Criminal Defense
+                </option>
+                <option value="family" className="bg-slate-800">
+                  Family Law
+                </option>
+                <option value="corporate" className="bg-slate-800">
+                  Corporate Law
+                </option>
+                <option value="ip" className="bg-slate-800">
+                  Intellectual Property
+                </option>
+                <option value="employment" className="bg-slate-800">
+                  Employment Law
+                </option>
+                <option value="probate" className="bg-slate-800">
+                  Probate / Estate
+                </option>
+                <option value="other" className="bg-slate-800">
+                  Other
+                </option>
               </select>
             </div>
           </div>

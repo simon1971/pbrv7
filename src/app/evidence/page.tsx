@@ -82,17 +82,35 @@ export default function EvidencePage() {
           />
           <div className="flex gap-2">
             <select className="px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50">
-              <option value="" className="bg-slate-800">All Types</option>
-              <option value="document" className="bg-slate-800">Document</option>
-              <option value="statement" className="bg-slate-800">Statement</option>
-              <option value="communication" className="bg-slate-800">Communication</option>
-              <option value="image" className="bg-slate-800">Image</option>
+              <option value="" className="bg-slate-800">
+                All Types
+              </option>
+              <option value="document" className="bg-slate-800">
+                Document
+              </option>
+              <option value="statement" className="bg-slate-800">
+                Statement
+              </option>
+              <option value="communication" className="bg-slate-800">
+                Communication
+              </option>
+              <option value="image" className="bg-slate-800">
+                Image
+              </option>
             </select>
             <select className="px-3 py-2 bg-white/8 border border-white/15 rounded-xl text-sm text-white/70 focus:outline-none focus:ring-2 focus:ring-sky-400/50">
-              <option value="" className="bg-slate-800">All Matters</option>
-              <option value="smith" className="bg-slate-800">Smith v. Johnson</option>
-              <option value="williams" className="bg-slate-800">Estate of Williams</option>
-              <option value="garcia" className="bg-slate-800">Garcia Employment Dispute</option>
+              <option value="" className="bg-slate-800">
+                All Matters
+              </option>
+              <option value="smith" className="bg-slate-800">
+                Smith v. Johnson
+              </option>
+              <option value="williams" className="bg-slate-800">
+                Estate of Williams
+              </option>
+              <option value="garcia" className="bg-slate-800">
+                Garcia Employment Dispute
+              </option>
             </select>
           </div>
         </div>

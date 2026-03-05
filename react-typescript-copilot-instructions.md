@@ -1,10 +1,11 @@
-
 # GitHub Copilot Instructions for React + TypeScript Application
 
 ## 📋 Project Overview
+
 This is a React + TypeScript application built using modern JavaScript tooling and strongly typed development practices.
 
 The project prioritizes:
+
 - strict TypeScript usage
 - modular React component architecture
 - predictable state management
@@ -29,15 +30,15 @@ The project prioritizes:
 # 📁 Project Structure
 
 src/
-  components/
-  pages/
-  hooks/
-  services/
-  api/
-  types/
-  utils/
-  styles/
-  context/
+components/
+pages/
+hooks/
+services/
+api/
+types/
+utils/
+styles/
+context/
 
 tests/
 public/
@@ -68,9 +69,9 @@ styles/ – styling and themes
 Example:
 
 interface User {
-  id: string
-  name: string
-  email: string
+id: string
+name: string
+email: string
 }
 
 ---
@@ -81,7 +82,7 @@ Components: PascalCase
 Hooks: useCamelCase  
 Variables: camelCase  
 Types: PascalCase  
-Constants: UPPER_CASE  
+Constants: UPPER_CASE
 
 Example file names:
 
@@ -98,8 +99,8 @@ Prefer arrow functions.
 Example:
 
 const getUser = async (id: string): Promise<User> => {
-  const response = await api.get(`/users/${id}`)
-  return response.data
+const response = await api.get(`/users/${id}`)
+return response.data
 }
 
 ---
@@ -113,16 +114,17 @@ Prefer functional components.
 Example:
 
 type Props = {
-  user: User
+user: User
 }
 
 export const UserCard = ({ user }: Props) => {
-  return (
-    <div className="user-card">
-      <h3>{user.name}</h3>
-      <p>{user.email}</p>
-    </div>
-  )
+return (
+
+<div className="user-card">
+<h3>{user.name}</h3>
+<p>{user.email}</p>
+</div>
+)
 }
 
 ---
@@ -130,6 +132,7 @@ export const UserCard = ({ user }: Props) => {
 ## Component Design Principles
 
 Components should be:
+
 - small
 - focused
 - reusable
@@ -149,7 +152,7 @@ useState
 useEffect  
 useMemo  
 useCallback  
-useRef  
+useRef
 
 Reusable logic should be placed in custom hooks such as:
 
@@ -172,8 +175,8 @@ Never place API logic directly inside React components.
 Example:
 
 export const fetchUsers = async (): Promise<User[]> => {
-  const response = await api.get("/users")
-  return response.data
+const response = await api.get("/users")
+return response.data
 }
 
 ---
@@ -199,6 +202,7 @@ UserCard.module.css
 # 📱 Responsive Design
 
 Layouts must support:
+
 - desktop
 - tablet
 - mobile
@@ -221,6 +225,7 @@ Avoid fixed pixel layouts where possible.
 # 🧪 Testing Guidelines
 
 Focus testing on:
+
 - component behaviour
 - business logic
 - service interactions
@@ -244,6 +249,7 @@ LoginForm_InvalidCredentials_ShowsError
 # 🔒 Security
 
 Always:
+
 - validate user input
 - sanitise dynamic content
 - avoid exposing secrets
@@ -295,9 +301,9 @@ Group files by feature.
 Example:
 
 components/
-  user/
-    UserCard.tsx
-    UserCard.module.css
-    UserCard.test.tsx
+user/
+UserCard.tsx
+UserCard.module.css
+UserCard.test.tsx
 
 Keep related files together.

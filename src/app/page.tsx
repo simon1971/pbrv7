@@ -61,32 +61,39 @@ export default function Dashboard() {
             href: "/matters",
             label: "View Matters",
             icon: "📋",
-            color: "bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-400/20",
+            color:
+              "bg-sky-500/15 hover:bg-sky-500/25 text-sky-300 border border-sky-400/20",
           },
           {
             href: "/intake",
             label: "New Intake",
             icon: "📥",
-            color: "bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-400/20",
+            color:
+              "bg-cyan-500/15 hover:bg-cyan-500/25 text-cyan-300 border border-cyan-400/20",
           },
           {
             href: "/evidence",
             label: "Evidence Workspace",
             icon: "🔍",
-            color: "bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 border border-blue-400/20",
+            color:
+              "bg-blue-500/15 hover:bg-blue-500/25 text-blue-300 border border-blue-400/20",
           },
           {
             href: "/drafts",
             label: "Draft Workspace",
             icon: "📝",
-            color: "bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-400/20",
+            color:
+              "bg-teal-500/15 hover:bg-teal-500/25 text-teal-300 border border-teal-400/20",
           },
         ].map((action) => (
           <Link
             key={action.href}
             href={action.href}
             className={`flex items-center gap-3 p-4 rounded-2xl font-medium transition-all duration-200 hover:-translate-y-0.5 ${action.color}`}
-            style={{backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)'}}
+            style={{
+              backdropFilter: "blur(12px)",
+              WebkitBackdropFilter: "blur(12px)",
+            }}
           >
             <span className="text-xl">{action.icon}</span>
             {action.label}

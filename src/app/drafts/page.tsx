@@ -69,7 +69,7 @@ export default function DraftsPage() {
                   onClick={() => setSelectedDraft(doc.id)}
                   className={`w-full text-left p-3 rounded-xl border transition-all ${
                     selectedDraft === doc.id
-                    ? "border-sky-400/40 bg-sky-500/20"
+                      ? "border-sky-400/40 bg-sky-500/20"
                       : "border-white/10 hover:bg-white/8"
                   }`}
                 >
